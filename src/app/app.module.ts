@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MoviesModule } from './movies/movies.module';
 
@@ -11,7 +10,6 @@ import { MoviesModule } from './movies/movies.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     MoviesModule
   ],
   providers: [],

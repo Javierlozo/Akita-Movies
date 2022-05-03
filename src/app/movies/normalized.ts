@@ -65,7 +65,7 @@ export const movies = {
         id: 1,
         title: 'Rear Window',
         genres: [5, 6],
-        actors: [1, 2, 3]
+        actors: [1, 2, 3, 4, 5, 6]
       },
       '2': {
         id: 2,
@@ -77,7 +77,7 @@ export const movies = {
         id: 3,
         title: 'The Third Man',
         genres: [3, 5, 6],
-        actors: [6, 7, 8]
+        actors: [6, 7, 8,]
       }
     }
   },

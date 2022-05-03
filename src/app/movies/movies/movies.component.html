@@ -1,4 +1,4 @@
-<section class="padding">
+<section class="padding p-4">
 
 	<div class="progress" *ngIf="isLoading$ | async">
 		<div class="indeterminate"></div>
@@ -24,7 +24,7 @@
 	</table>
 
 	<h3>Actors</h3>
-	<table style="width: 30%;">
+	<table style="width: 30%;" class="table">
 		<thead>
 			<tr>
 				<th>Name</th>
@@ -35,7 +35,6 @@
 			<tr *ngFor="let actor of actors$ | async">
 				<td class="flex align-center">
 					<input #actorName [value]="actor.name" class="actor-input" [class.view]="!inEditMode(actor.id)" (keyup.enter)="edit(actor.id, actorName.value)">
-					<i class="tiny material-icons" (click)="toggleView(actor.id, actorName)">edit</i>
 				</td>
 			</tr>
 		</tbody>

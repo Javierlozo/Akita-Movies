@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ID } from '@datorama/akita';
+import { faPencil } from '@fortawesome/free-solid-svg-icons';
 import { Observable } from 'rxjs';
 import { Actor } from '../actors/state/actor.model';
 import { ActorsQuery } from '../actors/state/actors.query';
@@ -14,6 +15,7 @@ import { MoviesService } from '../state/movies.service';
   styleUrls: ['./movies.component.scss']
 })
 export class MoviesComponent implements OnInit {
+  pencil = faPencil;
   movies$: Observable<Movie[]> | any;
   actors$: Observable<Actor[]> | any;
   isLoading$: Observable<boolean> | any;
@@ -31,15 +33,6 @@ export class MoviesComponent implements OnInit {
   edit(id: ID, name: string) {
     this.moviesService.updateActorName(id, name);
     this.edits.delete(id);
-  }
-
-  toggleView(id: ID, actorName: HTMLInputElement) {
-    if (this.edits.has(id)) {
-      this.edits.delete(id);
-    } else {
-      this.edits.add(id);
-      actorName.focus();
-    }
   }
 
   inEditMode(id: ID) {
